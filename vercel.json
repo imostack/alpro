@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "src": "/(.*)",
+      "has": [{ "type": "host", "value": "www.alproseltech.com" }],
+      "status": 301,
+      "headers": { "Location": "https://alproseltech.com/$1" }
+    },
+    { "handle": "filesystem" },
+    { "src": "/.*", "status": 301, "headers": { "Location": "/" } }
+  ]
+}

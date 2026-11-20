@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alprosel Tech — Now App Guts Limited</title>
+  <meta name="description" content="Alprosel Tech has transitioned to App Guts Limited, a SaaS company building platforms for African communities. For enquiries, contact hello@appguts.com." />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Alprosel Tech — Now App Guts Limited" />
+  <meta property="og:description" content="Alprosel Tech has transitioned to App Guts Limited. Visit appguts.com to learn more." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alproseltech.com" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://alproseltech.com" />
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #ffffff;
+      --surface: #f8f8fb;
+      --border: #e8e8f0;
+      --text: #0f0f14;
+      --muted: #6b6b80;
+      --indigo: #6366f1;
+      --purple: #7c3aed;
+    }
+
+    body {
+      font-family: "Inter", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 560px;
+      text-align: center;
+    }
+
+    /* Badge */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--indigo);
+      background: rgba(99, 102, 241, 0.08);
+      border: 1px solid rgba(99, 102, 241, 0.2);
+      border-radius: 999px;
+      padding: 0.35rem 0.85rem;
+      margin-bottom: 2rem;
+      letter-spacing: 0.02em;
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--indigo);
+    }
+
+    /* Wordmark */
+    .wordmark {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+
+    .wordmark span {
+      background: linear-gradient(135deg, var(--indigo), var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .sub-wordmark {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+      letter-spacing: 0.01em;
+    }
+
+    /* Divider with arrow */
+    .transition-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .transition-arrow .line {
+      height: 1px;
+      width: 48px;
+      background: var(--border);
+    }
+
+    .transition-arrow .arrow {
+      font-size: 1.25rem;
+      color: var(--muted);
+    }
+
+    /* Body text */
+    .body-text {
+      font-size: 1.0625rem;
+      font-weight: 400;
+      color: var(--muted);
+      line-height: 1.75;
+      margin-bottom: 2.5rem;
+      max-width: 440px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .body-text strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* CTA buttons */
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, var(--indigo), var(--purple));
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0.75rem 1.75rem;
+      border-radius: 10px;
+      transition: opacity 0.15s ease;
+      letter-spacing: -0.01em;
+    }
+
+    .btn-primary:hover { opacity: 0.88; }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--muted);
+      font-family: inherit;
+      font-size: 0.875rem;
+      font-weight: 400;
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .btn-secondary:hover { color: var(--text); }
+
+    /* Divider */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin-bottom: 2rem;
+    }
+
+    /* Contact */
+    .contact {
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .contact a {
+      color: var(--indigo);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact a:hover { text-decoration: underline; }
+
+    /* Footer note */
+    .footer-note {
+      margin-top: 3rem;
+      font-size: 0.75rem;
+      color: #aaa;
+      letter-spacing: 0.01em;
+    }
+
+    @media (max-width: 480px) {
+      .wordmark { font-size: 2rem; }
+    }
+
+    /* Fade in */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .card { animation: fadeUp 0.5s ease both; }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+
+    <div class="badge">
+      <span class="badge-dot"></span>
+      Company update
+    </div>
+
+    <h1 class="wordmark">Alprosel <span>Tech</span></h1>
+    <p class="sub-wordmark">alproseltech.com</p>
+
+    <div class="transition-arrow">
+      <div class="line"></div>
+      <span class="arrow">↓</span>
+      <div class="line"></div>
+    </div>
+
+    <p class="body-text">
+      Alprosel Tech has transitioned to <strong>App Guts Limited</strong> — a SaaS company
+      building modern platforms for African communities, creators, and businesses.
+      <br /><br />
+      Our flagship product, <strong>Events Kona</strong>, is a live event ticketing and
+      discovery platform now live in Port Harcourt, Nigeria.
+    </p>
+
+    <div class="actions">
+      <a href="https://appguts.com" target="_blank" rel="noopener noreferrer" class="btn-primary">
+        Visit App Guts
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="https://eventskona.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+        Explore Events Kona →
+      </a>
+    </div>
+
+    <div class="divider"></div>
+
+    <p class="contact">
+      For any enquiries, reach us at
+      <a href="mailto:hello@appguts.com">hello@appguts.com</a>
+    </p>
+
+    <p class="footer-note">© 2026 App Guts Limited. Formerly Alprosel Tech.</p>
+
+  </div>
+
+</body>
+</html>
