@@ -4,136 +4,271 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alprosel Technologies — Websites, Web Apps &amp; SEO in Port Harcourt</title>
-  <meta name="description" content="Alprosel Technologies is a Port Harcourt tech services company, building websites, web applications, SEO and brand identities for businesses since 2020." />
+  <meta name="description" content="Alprosel Technologies is a Port Harcourt tech services company, building websites, web applications, mobile apps, SEO and brand identities for businesses since 2020." />
   <meta name="robots" content="index, follow" />
 
   <meta property="og:title" content="Alprosel Technologies — Websites, Web Apps &amp; SEO" />
-  <meta property="og:description" content="Tech services company in Port Harcourt, Nigeria. Websites, web apps, SEO and branding since 2020." />
+  <meta property="og:description" content="Tech services company in Port Harcourt, Nigeria. Websites, web apps, mobile apps, SEO and branding since 2020." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://alproseltech.com" />
-  <link rel="icon" href="alprosel-logo.png" />
-  <meta property="og:image" content="https://alproseltech.com/alprosel-logo.png" />
+  <meta property="og:image" content="https://alproseltech.com/Alpro_logo.png" />
+  <link rel="icon" href="Alpro_logo.png" />
   <link rel="canonical" href="https://alproseltech.com" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Organization","name":"Alprosel Technologies","alternateName":"Alprosel Tech","url":"https://alproseltech.com","logo":"https://alproseltech.com/alprosel-logo.png","email":"hello@alproseltech.com","foundingDate":"2020","description":"Tech services company building websites, web applications, SEO and brand identities.","founder":{"@type":"Person","name":"Imoyin Sampson","url":"https://imoyinsampson.com"},"address":{"@type":"PostalAddress","addressLocality":"Port Harcourt","addressCountry":"NG"}}
+  {"@context":"https://schema.org","@type":"Organization","name":"Alprosel Technologies","alternateName":"Alprosel Tech","url":"https://alproseltech.com","logo":"https://alproseltech.com/Alpro_logo.png","email":"hello@alproseltech.com","foundingDate":"2020","description":"Tech services company building websites, web applications, mobile apps, SEO and brand identities.","founder":{"@type":"Person","name":"Imoyin Sampson","url":"https://imoyinsampson.com"},"address":{"@type":"PostalAddress","addressLocality":"Port Harcourt","addressCountry":"NG"}}
   </script>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #ffffff; --surface: #f8f8fb; --border: #e8e8f0;
-      --text: #0f0f14; --muted: #6b6b80; --indigo: #08405e; --purple: #e3262b;
+      --navy: #08405e; --deep: #05293c; --red: #e3262b; --red-d: #c91d22;
+      --ink: #0e1a24; --muted: #566674; --line: #e3e8ec; --surface: #f4f7f9; --white: #fff;
+      --shadow: 0 1px 2px rgba(5,41,60,.06), 0 12px 32px -8px rgba(5,41,60,.18);
     }
     html { scroll-behavior: smooth; }
-    body { font-family: "Inter", system-ui, sans-serif; background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; line-height: 1.6; }
+    body { font-family: "Inter", system-ui, sans-serif; color: var(--ink); background: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
     a { color: inherit; text-decoration: none; }
-    .wrap { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; }
+    img { max-width: 100%; display: block; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 1.5rem; }
+    .eyebrow { font-size: .75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--red); margin-bottom: .9rem; }
 
-    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; }
-    .logo img { height: 52px; width: auto; display: block; }
-    .logo span, .grad { background: linear-gradient(135deg, var(--indigo) 30%, var(--purple)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-    nav a.cta { color: var(--purple); font-size: 0.875rem; font-weight: 500; color: var(--indigo); }
+    /* Header */
+    header.top { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+    header.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .logo img { height: 46px; width: auto; }
+    .links { display: flex; align-items: center; gap: 2rem; font-size: .9rem; font-weight: 500; color: var(--muted); }
+    .links a:hover { color: var(--navy); }
+    .btn { display: inline-flex; align-items: center; gap: .5rem; background: var(--red); color: #fff !important; font-weight: 600; font-size: .9rem; padding: .75rem 1.4rem; border-radius: 8px; transition: background .15s, transform .15s; }
+    .btn:hover { background: var(--red-d); transform: translateY(-1px); }
+    .btn.ghost { background: transparent; color: var(--navy) !important; border: 1.5px solid var(--line); }
+    .btn.ghost:hover { border-color: var(--navy); background: transparent; }
+    .btn.sm { padding: .55rem 1.1rem; font-size: .85rem; }
 
-    .hero { padding: 5rem 0 4rem; text-align: center; }
-    .badge { display: inline-block; font-size: 0.75rem; font-weight: 500; color: var(--indigo); background: rgba(8,64,94,.07); border: 1px solid rgba(8,64,94,.2); border-radius: 999px; padding: .35rem .85rem; margin-bottom: 1.75rem; }
-    h1 { font-size: clamp(2.25rem, 6vw, 3.5rem); font-weight: 700; letter-spacing: -0.035em; line-height: 1.1; margin-bottom: 1.25rem; }
-    .lead { font-size: 1.125rem; color: var(--muted); max-width: 540px; margin: 0 auto 2rem; }
-    .btn { display: inline-block; background: linear-gradient(135deg, var(--indigo), var(--purple)); color: #fff; font-weight: 600; font-size: .9375rem; padding: .8rem 1.75rem; border-radius: 10px; transition: opacity .15s; }
-    .btn:hover { opacity: .88; }
+    /* Hero */
+    .hero { padding: 5rem 0 5.5rem; background: linear-gradient(180deg, var(--surface), var(--white)); overflow: hidden; }
+    .hero .wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 3.5rem; align-items: center; }
+    h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 800; letter-spacing: -.035em; line-height: 1.06; color: var(--deep); margin-bottom: 1.4rem; }
+    h1 em { font-style: normal; color: var(--red); }
+    .lead { font-size: 1.125rem; color: var(--muted); max-width: 33rem; margin-bottom: 2rem; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: .75rem; margin-bottom: 2.75rem; }
+    .facts { display: flex; gap: 2.5rem; padding-top: 1.75rem; border-top: 1px solid var(--line); }
+    .facts b { display: block; font-size: 1.35rem; font-weight: 700; color: var(--deep); letter-spacing: -.02em; }
+    .facts span { font-size: .8rem; color: var(--muted); }
 
-    section { padding: 4rem 0; border-top: 1px solid var(--border); }
-    h2 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: .5rem; }
-    .sec-sub { color: var(--muted); margin-bottom: 2rem; }
-    .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
-    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; }
-    .card h3 { font-size: 1rem; font-weight: 600; margin-bottom: .4rem; }
-    .card p { font-size: .9rem; color: var(--muted); }
-    .work { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-    .work a.card { transition: border-color .15s, transform .15s; display: block; }
-    .work a.card:hover { border-color: var(--indigo); transform: translateY(-2px); }
-    .tag { font-size: .75rem; color: var(--indigo); font-weight: 500; margin-bottom: .35rem; }
-    .host { font-size: .8rem; color: var(--muted); margin-top: .75rem; }
+    /* Browser frame */
+    .frame { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--line); }
+    .frame .bar { height: 30px; background: #eef2f5; display: flex; align-items: center; gap: 6px; padding: 0 12px; border-bottom: 1px solid var(--line); }
+    .frame .bar i { width: 9px; height: 9px; border-radius: 50%; background: #cfd8de; }
+    .frame .bar u { margin-left: 10px; flex: 1; max-width: 220px; height: 16px; border-radius: 8px; background: #fff; border: 1px solid var(--line); font: 500 10px/14px "Inter", sans-serif; color: #7b8a96; text-decoration: none; padding: 0 9px; overflow: hidden; white-space: nowrap; }
+    .frame .shot { aspect-ratio: 16/10; overflow: hidden; background: var(--deep); }
+    .frame .shot img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform .6s ease; }
 
-    .contact { text-align: center; }
-    .contact p { color: var(--muted); max-width: 460px; margin: 0 auto 1.75rem; }
+    .stack { position: relative; padding-bottom: 3.5rem; }
+    .stack .back { position: absolute; width: 62%; right: -4%; bottom: 0; transform: rotate(2deg); z-index: 2; }
+    .stack .main { width: 92%; transform: rotate(-1.5deg); }
 
-    footer { border-top: 1px solid var(--border); padding: 2rem 0 3rem; font-size: .8rem; color: #8a8a9a; display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; justify-content: space-between; }
-    footer a:hover { color: var(--text); }
+    /* Sections */
+    section { padding: 5.5rem 0; }
+    .head { max-width: 38rem; margin-bottom: 3rem; }
+    h2 { font-size: clamp(1.8rem, 3.4vw, 2.4rem); font-weight: 800; letter-spacing: -.03em; line-height: 1.12; color: var(--deep); margin-bottom: .9rem; }
+    .head p { color: var(--muted); font-size: 1.05rem; }
+
+    /* Services */
+    .services { border-top: 1px solid var(--line); }
+    .svc { display: grid; grid-template-columns: 3.5rem 1fr 1.4fr; gap: 1.5rem; padding: 1.6rem 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+    .svc:first-of-type { border-top: 1px solid var(--line); }
+    .svc .n { font-size: .8rem; font-weight: 600; color: var(--red); letter-spacing: .06em; }
+    .svc h3 { font-size: 1.2rem; font-weight: 700; color: var(--deep); letter-spacing: -.01em; }
+    .svc p { color: var(--muted); font-size: .95rem; }
+
+    /* Work */
+    .work-sec { background: var(--surface); }
+    .work { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem 2rem; }
+    .proj { display: block; }
+    .proj:hover .shot img { transform: scale(1.04); }
+    .proj:hover .frame { border-color: var(--navy); }
+    .proj .meta { padding: 1.1rem .25rem 0; }
+    .proj .tag { font-size: .72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--red); margin-bottom: .3rem; }
+    .proj h3 { font-size: 1.15rem; font-weight: 700; color: var(--deep); letter-spacing: -.01em; margin-bottom: .35rem; }
+    .proj p { font-size: .92rem; color: var(--muted); margin-bottom: .6rem; }
+    .proj .go { font-size: .85rem; font-weight: 600; color: var(--navy); }
+    .proj:hover .go { color: var(--red); }
+    .phone-stage { aspect-ratio: 16/10; background: linear-gradient(135deg, var(--navy), var(--deep)); border-radius: 12px; display: flex; align-items: flex-end; justify-content: center; overflow: hidden; box-shadow: var(--shadow); }
+    .phone { width: 34%; max-width: 190px; border: 7px solid #0a0f14; border-bottom: 0; border-radius: 26px 26px 0 0; overflow: hidden; background: #0a0f14; margin-top: 8%; transition: transform .4s ease; }
+    .proj:hover .phone { transform: translateY(-6px); }
+    .phone img { width: 100%; display: block; }
+
+    /* Process */
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .step { border-top: 3px solid var(--navy); padding-top: 1.3rem; }
+    .step .n { font-size: .8rem; font-weight: 700; color: var(--red); letter-spacing: .06em; margin-bottom: .5rem; }
+    .step h3 { font-size: 1.1rem; font-weight: 700; color: var(--deep); margin-bottom: .4rem; }
+    .step p { color: var(--muted); font-size: .95rem; }
+
+    /* Contact */
+    .contact { background: var(--deep); color: #fff; text-align: center; padding: 5.5rem 0; }
+    .contact h2 { color: #fff; }
+    .contact p { color: #b7c9d4; max-width: 32rem; margin: 0 auto 2rem; font-size: 1.05rem; }
+    .contact .btn { font-size: 1rem; padding: .95rem 1.9rem; }
+
+    footer { padding: 2rem 0 2.5rem; font-size: .82rem; color: #6c7c88; }
+    footer .wrap { display: flex; flex-wrap: wrap; gap: .5rem 2rem; justify-content: space-between; align-items: center; }
+    footer a { color: var(--navy); font-weight: 500; }
+    footer a:hover { color: var(--red); }
+
+    @media (max-width: 900px) {
+      .hero .wrap { grid-template-columns: 1fr; gap: 3rem; }
+      .stack { max-width: 520px; }
+      .work { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; gap: 1.75rem; }
+      .svc { grid-template-columns: 2.5rem 1fr; }
+      .svc p { grid-column: 2; }
+      .links a:not(.btn) { display: none; }
+    }
+    @media (max-width: 480px) {
+      .facts { gap: 1.5rem; }
+      section { padding: 4rem 0; }
+      .hero { padding-top: 3rem; }
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <nav>
+
+  <header class="top">
+    <div class="wrap">
       <a href="/" class="logo"><img src="Alpro_logo.png" alt="Alprosel Technologies — Let's build together" /></a>
-      <a class="cta" href="#contact">Start a project</a>
-    </nav>
+      <nav class="links">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#process">Process</a>
+        <a class="btn sm" href="#contact">Start a project</a>
+      </nav>
+    </div>
+  </header>
 
-    <header class="hero">
-      <div class="badge">Port Harcourt, Nigeria · Since 2020</div>
-      <h1>Websites and software that <span class="grad">work for your business</span></h1>
-      <p class="lead">Alprosel Technologies designs and builds websites, web applications and search visibility for growing businesses.</p>
-      <a class="btn" href="#contact">Start a project</a>
-    </header>
-
-    <section id="services">
-      <h2>What we do</h2>
-      <p class="sec-sub">Small, focused projects, delivered end to end.</p>
-      <div class="grid">
-        <div class="card"><h3>Websites</h3><p>Fast, mobile-friendly company and brand websites that load quickly and look credible.</p></div>
-        <div class="card"><h3>Mobile apps</h3><p>Mobile apps for iOS and Android, from a first release to ongoing updates.</p></div>
-        <div class="card"><h3>Web apps &amp; platforms</h3><p>Custom applications, dashboards, booking and enquiry flows, and admin tools.</p></div>
-        <div class="card"><h3>SEO</h3><p>Metadata, sitemaps, structured data and content structure so customers can find you on Google.</p></div>
-        <div class="card"><h3>Branding &amp; design</h3><p>Logos, identity and visual direction that carry across your site and materials.</p></div>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Port Harcourt, Nigeria · Since 2020</p>
+        <h1>Websites and software that make your business <em>look the part.</em></h1>
+        <p class="lead">Alprosel Technologies designs and builds fast, polished websites, web apps and mobile apps for growing businesses, and makes sure customers can find them.</p>
+        <div class="cta-row">
+          <a class="btn" href="#contact">Start a project</a>
+          <a class="btn ghost" href="#work">See our work</a>
+        </div>
+        <div class="facts">
+          <div><b>2020</b><span>Founded</span></div>
+          <div><b>Web + Mobile</b><span>Sites, apps, SEO</span></div>
+          <div><b>Live</b><span>Real client sites</span></div>
+        </div>
       </div>
-    </section>
 
-    <section id="work">
-      <h2>Recent work</h2>
-      <p class="sec-sub">Websites and apps delivered for clients in oil &amp; gas, logistics and consulting.</p>
+      <div class="stack" aria-hidden="true">
+        <div class="frame main">
+          <div class="bar"><i></i><i></i><i></i><u>umotechenergy.com</u></div>
+          <div class="shot"><img src="work/umotechenergy.jpg" alt="" /></div>
+        </div>
+        <div class="frame back">
+          <div class="bar"><i></i><i></i><i></i></div>
+          <div class="shot"><img src="work/yemibenjamin.jpg" alt="" /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">What we do</p>
+        <h2>Everything a business needs to be taken seriously online.</h2>
+        <p>Small, focused projects, handled end to end by one team.</p>
+      </div>
+      <div>
+        <div class="svc"><span class="n">01</span><h3>Websites</h3><p>Fast, mobile-friendly company and brand websites that load quickly, read clearly and build trust on first visit.</p></div>
+        <div class="svc"><span class="n">02</span><h3>Web apps &amp; platforms</h3><p>Custom applications, dashboards, booking and enquiry flows, and the admin tools behind them.</p></div>
+        <div class="svc"><span class="n">03</span><h3>Mobile apps</h3><p>Apps for iOS and Android, from a first release through ongoing updates.</p></div>
+        <div class="svc"><span class="n">04</span><h3>SEO</h3><p>Metadata, sitemaps, structured data and page structure, so the right customers find you on Google.</p></div>
+        <div class="svc"><span class="n">05</span><h3>Branding &amp; design</h3><p>Logos, identity and visual direction that carry consistently across your site and materials.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="work-sec">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Selected work</p>
+        <h2>Live sites for businesses across Nigeria.</h2>
+        <p>Oil &amp; gas, logistics, supply and consulting, each with its own look and its own goals.</p>
+      </div>
+
       <div class="work">
-        <a class="card" href="https://www.umotechenergy.com" target="_blank" rel="noopener noreferrer">
-          <div class="tag">Oil &amp; gas · 2026</div><h3>Umotech Energy Service Ltd</h3>
-          <p>Company website for an engineering, maintenance and well-testing equipment leasing firm, built to rank for local searches.</p>
-          <div class="host">umotechenergy.com ↗</div>
+        <a class="proj" href="https://www.umotechenergy.com" target="_blank" rel="noopener noreferrer">
+          <div class="frame"><div class="bar"><i></i><i></i><i></i><u>umotechenergy.com</u></div><div class="shot"><img src="work/umotechenergy.jpg" alt="Umotech Energy Service website" loading="lazy" /></div></div>
+          <div class="meta"><div class="tag">Oil &amp; gas · Website</div><h3>Umotech Energy Service Ltd</h3><p>Company website for an engineering, maintenance and well-testing equipment leasing firm, built to rank for local searches.</p><span class="go">Visit site →</span></div>
         </a>
-        <a class="card" href="https://www.sucexpress.com" target="_blank" rel="noopener noreferrer">
-          <div class="tag">Logistics · 2026</div><h3>Sucexpress website</h3>
-          <p>Marketing site for an on-demand truck-hailing and freight platform, with a full help centre and driver sign-up.</p>
-          <div class="host">sucexpress.com ↗</div>
+
+        <a class="proj" href="https://www.sucexpress.com" target="_blank" rel="noopener noreferrer">
+          <div class="frame"><div class="bar"><i></i><i></i><i></i><u>sucexpress.com</u></div><div class="shot"><img src="work/sucexpress.jpg" alt="Sucexpress website" loading="lazy" /></div></div>
+          <div class="meta"><div class="tag">Logistics · Website</div><h3>Sucexpress</h3><p>Marketing site for an on-demand truck-hailing and freight platform, with a full help centre and driver sign-up.</p><span class="go">Visit site →</span></div>
         </a>
-        <a class="card" href="https://www.sucexpress.com" target="_blank" rel="noopener noreferrer">
-          <div class="tag">Mobile app · Logistics</div><h3>Sucexpress mobile app</h3>
-          <p>Mobile app for shippers and drivers on an on-demand truck-hailing and freight platform operating across Nigeria.</p>
-          <div class="host">sucexpress.com ↗</div>
+
+        <a class="proj" href="https://www.sucexpress.com" target="_blank" rel="noopener noreferrer">
+          <div class="phone-stage"><div class="phone"><img src="work/sucexpress-app.png" alt="Sucexpress mobile app booking screen" loading="lazy" /></div></div>
+          <div class="meta"><div class="tag">Logistics · Mobile app</div><h3>Sucexpress mobile app</h3><p>Mobile app for shippers and drivers on a freight platform operating across Nigeria: book a truck in minutes.</p><span class="go">Learn more →</span></div>
         </a>
-        <a class="card" href="https://www.yemibenjamin.com" target="_blank" rel="noopener noreferrer">
-          <div class="tag">Consulting · 2026</div><h3>Yemi Benjamin</h3>
-          <p>Personal-brand website for an investment consultant and author: bookings, books and live events in one place.</p>
-          <div class="host">yemibenjamin.com ↗</div>
+
+        <a class="proj" href="https://www.yemibenjamin.com" target="_blank" rel="noopener noreferrer">
+          <div class="frame"><div class="bar"><i></i><i></i><i></i><u>yemibenjamin.com</u></div><div class="shot"><img src="work/yemibenjamin.jpg" alt="Yemi Benjamin website" loading="lazy" /></div></div>
+          <div class="meta"><div class="tag">Consulting · Website</div><h3>Yemi Benjamin</h3><p>Personal-brand website for an investment consultant and author: bookings, books and live events in one place.</p><span class="go">Visit site →</span></div>
         </a>
-        <a class="card" href="https://www.aerojim.com" target="_blank" rel="noopener noreferrer">
-          <div class="tag">Wholesale supply · 2026</div><h3>AeroJim Energy Supply Solutions</h3>
-          <p>Product catalogue and request-for-quote site for a wholesale supplier of oil &amp; gas equipment.</p>
-          <div class="host">aerojim.com ↗</div>
+
+        <a class="proj" href="https://www.aerojim.com" target="_blank" rel="noopener noreferrer">
+          <div class="frame"><div class="bar"><i></i><i></i><i></i><u>aerojim.com</u></div><div class="shot"><img src="work/aerojim.jpg" alt="AeroJim Energy Supply Solutions website" loading="lazy" /></div></div>
+          <div class="meta"><div class="tag">Wholesale supply · Web platform</div><h3>AeroJim Energy Supply Solutions</h3><p>Equipment catalogue and request-for-quote platform for an oil &amp; gas equipment supplier.</p><span class="go">Visit site →</span></div>
+        </a>
+
+        <a class="proj" href="https://www.surfacemetal.com" target="_blank" rel="noopener noreferrer">
+          <div class="frame"><div class="bar"><i></i><i></i><i></i><u>surfacemetal.com</u></div><div class="shot"><img src="work/surfacemetal.jpg" alt="Surface Metal Limited website" loading="lazy" /></div></div>
+          <div class="meta"><div class="tag">Technical services · Website</div><h3>Surface Metal Limited</h3><p>Company website for a wellsite support, inspection and instrumentation services provider, with SEO set up.</p><span class="go">Visit site →</span></div>
         </a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="contact" class="contact">
+  <section id="process">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">How we work</p>
+        <h2>Straightforward from first email to launch.</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="n">01</div><h3>Brief</h3><p>You tell us what the business does and what the site needs to achieve. We agree scope and price up front.</p></div>
+        <div class="step"><div class="n">02</div><h3>Design &amp; build</h3><p>We design and build it for phones first, with SEO set up from the start, and share progress as we go.</p></div>
+        <div class="step"><div class="n">03</div><h3>Launch &amp; support</h3><p>We put it live on fast hosting on your domain, then stay available for changes and updates.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <p class="eyebrow">Start a project</p>
       <h2>Have a project in mind?</h2>
       <p>Email a short brief and we will get back to you to book a call. Projects are taken by appointment.</p>
       <a class="btn" href="mailto:hello@alproseltech.com">hello@alproseltech.com</a>
-    </section>
+    </div>
+  </section>
 
-    <footer>
+  <footer>
+    <div class="wrap">
       <span>© 2026 Alprosel Technologies · Port Harcourt, Nigeria</span>
       <span>Led by <a href="https://imoyinsampson.com" target="_blank" rel="noopener noreferrer">Imoyin Sampson</a> · Also building <a href="https://appguts.com" target="_blank" rel="noopener noreferrer">App Guts</a></span>
-    </footer>
-  </div>
+    </div>
+  </footer>
+
 </body>
 </html>
